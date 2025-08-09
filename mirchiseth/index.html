@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naveen Firewall Sheet – Partition-Only Mode</title>
+  <meta name="description" content="Slip-proof conversation map and ready lines to keep the land sale firewalled. Partition/title first, sale later. 100% white money policy." />
+  <style>
+    :root{
+      --bg:#0b1220; --fg:#e6ebf5; --muted:#a8b3cf; --card:#121a2b; --accent:#70e1ff; --accent-2:#77ffc0; --danger:#ff5d73; --ok:#88ffa9; --shadow:0 8px 30px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f8ff; --fg:#0e1726; --muted:#43526b; --card:#ffffff; --accent:#0066ff; --accent-2:#0db57d; --danger:#c62850; --ok:#0d8b5f; }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:radial-gradient(1200px 800px at 80% -10%, rgba(112,225,255,.15), transparent 60%), radial-gradient(900px 700px at -10% 110%, rgba(119,255,192,.12), transparent 50%), var(--bg);color:var(--fg);font:500 16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial}
+    .wrap{max-width:1000px;margin:32px auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .title{font-weight:800;letter-spacing:.2px;font-size:clamp(20px,3.6vw,34px)}
+    .subtitle{color:var(--muted);font-size:clamp(12px,2vw,14px)}
+    .bar{display:flex;gap:10px;flex-wrap:wrap}
+    button, .btn{appearance:none;border:1px solid transparent;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));color:var(--fg);padding:10px 14px;border-radius:12px;cursor:pointer;box-shadow:var(--shadow);transition:.2s;display:inline-flex;align-items:center;gap:8px}
+    button:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.15)}
+    .ghost{background:transparent;border-color:rgba(255,255,255,.15)}
+    .accent{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#001018;font-weight:800}
+    .danger{background:linear-gradient(135deg,#ff6f91,var(--danger));color:#fff}
+    .ok{background:linear-gradient(135deg,#b4ffdd,var(--ok));color:#001814;font-weight:800}
+
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:850px){.grid{grid-template-columns:1.1fr .9fr}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px 18px 10px;box-shadow:var(--shadow)}
+    .card h2{margin:6px 0 6px;font-size:18px}
+    .small{font-size:13px;color:var(--muted)}
+    .list{display:grid;gap:10px;margin:10px 0}
+    .item{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px;display:flex;justify-content:space-between;gap:12px;align-items:start}
+    .item p{margin:0}
+    .row{display:flex;gap:8px;flex-wrap:wrap}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:14px}
+    .pill{font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.15);color:var(--muted)}
+
+    details{border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.02);padding:10px}
+    details>summary{cursor:pointer;list-style:none}
+    details>summary::-webkit-details-marker{display:none}
+    details[open]{background:rgba(255,255,255,.04)}
+
+    .kbd{padding:.15rem .4rem;border:1px solid rgba(255,255,255,.25);border-bottom-width:2px;border-radius:6px;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05));font-family:ui-monospace,monospace;font-size:.9em}
+
+    footer{margin-top:18px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .note{padding:10px 12px;border:1px dashed rgba(255,255,255,.25);border-radius:12px}
+
+    /* Print */
+    @media print{
+      .bar, .no-print{display:none!important}
+      body{background:#fff;color:#000}
+      .card, details{box-shadow:none;border-color:#000}
+      .item{background:#fff;border-color:#000}
+      .title{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="title">Naveen Firewall Sheet</div>
+        <div class="subtitle">Partition/Title first. Sale later. <strong>100% white only</strong>. Keep conversations short ➜ pivot ➜ redirect.</div>
+      </div>
+      <div class="bar no-print">
+        <button class="ghost" id="btn-print" title="Save/Print PDF"><span>🖨️</span> Print</button>
+        <button class="ghost" id="btn-discreet" title="Toggle discreet mode"><span>🕶️</span> Discreet</button>
+        <button class="accent" id="panic" title="Show 3 core lines (big)">⚡ Panic Lines</button>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Core Technique</h2>
+        <div class="list">
+          <div class="item"><p><strong>Pivot:</strong> Short, non-specific answer that ends the topic.</p><span class="pill">Step 1</span></div>
+          <div class="item"><p><strong>Redirect:</strong> Immediately ask about <em>partition/title</em> to shift focus.</p><span class="pill">Step 2</span></div>
+          <div class="item"><p><strong>Repeat:</strong> Use the same pattern every time to train expectations.</p><span class="pill">Step 3</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Non‑Negotiables</h2>
+        <ul class="list" style="list-style:none;padding-left:0">
+          <li class="item"><p>All‑white transaction only. No cash, no adjustments, no third‑party conversions.</p><button class="btn ghost copy" data-text="I have committed to an all‑white transaction for my peace of mind.">Copy line</button></li>
+          <li class="item"><p>Buyer identity, price, and advance are <strong>confidential</strong> until registry.</p><button class="btn ghost copy" data-text="I’m not sharing buyer or price details until the title is updated and we’re at registry.">Copy line</button></li>
+          <li class="item"><p>Naveen’s role (if any) is <em>partition & title assistance only</em>.</p><button class="btn ghost copy" data-text="Right now your role is just helping with partition and title. Sale decisions will be separate.">Copy line</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Slip‑Proof Conversation Map</h2>
+      <p class="small">Tap a scenario to reveal pivot + redirect. Use the <span class="kbd">Copy</span> buttons to prepare quick replies.</p>
+
+      <div class="list">
+        <details>
+          <summary><strong>1) Buyer Identity</strong> — “Who’s buying?”</summary>
+          <div class="item"><p><strong>Pivot:</strong> No buyer finalized — title first, then I’ll think about it.</p><button class="btn ghost copy" data-text="No buyer finalized — title first, then I’ll think about it.">Copy</button></div>
+          <div class="item"><p><strong>Redirect:</strong> By the way, what’s the next step on the partition papers?</p><button class="btn ghost copy" data-text="By the way, what’s the next step on the partition papers?">Copy</button></div>
+        </details>
+
+        <details>
+          <summary><strong>2) Price/Rate</strong> — “Rate kya socha hai?”</summary>
+          <div class="item"><p><strong>Pivot:</strong> Numbers will only be clear after the title is upgraded.</p><button class="btn ghost copy" data-text="Numbers will only be clear after the title is upgraded.">Copy</button></div>
+          <div class="item"><p><strong>Redirect:</strong> Once we get the fard updated, I can look at the market properly.</p><button class="btn ghost copy" data-text="Once we get the fard updated, I can look at the market properly.">Copy</button></div>
+        </details>
+
+        <details>
+          <summary><strong>3) He Offers His Buyer/Network</strong> — “Mere paas ready buyer hai.”</summary>
+          <div class="item"><p><strong>Pivot:</strong> Let’s finish the legal process first — I’ll review options after that.</p><button class="btn ghost copy" data-text="Let’s finish the legal process first — I’ll review options after that.">Copy</button></div>
+          <div class="item"><p><strong>Redirect:</strong> How quickly can we get the mutation done after partition?</p><button class="btn ghost copy" data-text="How quickly can we get the mutation done after partition?">Copy</button></div>
+        </details>
+
+        <details>
+          <summary><strong>4) Black Money Suggestion</strong> — “Thoda cash lena padega…”</summary>
+          <div class="item"><p><strong>Pivot:</strong> I’ve committed to all‑white for my peace of mind — keeping it simple and clean.</p><button class="btn ghost copy" data-text="I’ve committed to all‑white for my peace of mind — keeping it simple and clean.">Copy</button></div>
+          <div class="item"><p><strong>Redirect:</strong> In the white route, what documents should we prepare now?</p><button class="btn ghost copy" data-text="In the white route, what documents should we prepare now?">Copy</button></div>
+        </details>
+
+        <details>
+          <summary><strong>5) Timeline Pressure</strong> — “Kab close karoge?”</summary>
+          <div class="item"><p><strong>Pivot:</strong> Partition clearance will set the timeline — until then, no fixed date.</p><button class="btn ghost copy" data-text="Partition clearance will set the timeline — until then, no fixed date.">Copy</button></div>
+          <div class="item"><p><strong>Redirect:</strong> Who in your network can fast‑track the title update?</p><button class="btn ghost copy" data-text="Who in your network can fast‑track the title update?">Copy</button></div>
+        </details>
+
+        <details>
+          <summary><strong>6) Advance Payment Probe</strong> — “Kuch advance aa gaya?”</summary>
+          <div class="item"><p><strong>Pivot:</strong> Not taking any advance until title is clean — safer that way.</p><button class="btn ghost copy" data-text="Not taking any advance until title is clean — safer that way.">Copy</button></div>
+          <div class="item"><p><strong>Redirect:</strong> Is the lawyer ready to file once the tehsildar signs?</p><button class="btn ghost copy" data-text="Is the lawyer ready to file once the tehsildar signs?">Copy</button></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Quick Policy Reminders</h2>
+      <div class="row">
+        <span class="pill">All payments via bank only</span>
+        <span class="pill">No verbal price commits</span>
+        <span class="pill">Partition scope only with Naveen</span>
+        <span class="pill">Independent lawyer for sale</span>
+        <span class="pill">Keep buyer details private</span>
+      </div>
+    </section>
+
+    <footer>
+      <div class="note">Tip: If you feel cornered, repeat any pivot line and go silent. Silence is leverage.</div>
+      <div class="note">Print this page as PDF and keep it handy during calls or visits.</div>
+    </footer>
+  </div>
+
+  <dialog id="panicModal">
+    <style>
+      #panicModal{border:none;border-radius:20px;max-width:760px;width:92%;padding:0;background:var(--card);color:var(--fg);box-shadow:var(--shadow)}
+      #panicModal .wrap2{padding:20px}
+      .lines{display:grid;gap:12px;margin:10px 0}
+      .big{font-size:clamp(20px,4.2vw,34px);font-weight:900;letter-spacing:.2px}
+      .closebar{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    </style>
+    <div class="wrap2">
+      <div class="closebar"><strong>⚡ Panic Lines</strong><button class="ghost" id="panicClose">Close</button></div>
+      <div class="lines">
+        <div class="big">“I’m keeping it <u>all‑white</u> for my peace of mind.”</div>
+        <div class="big">“Title first. I’ll decide buyers <u>after</u> partition.”</div>
+        <div class="big">“What’s the next step on the <u>partition papers</u>?”</div>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    const titleEl = document.querySelector('.title');
+    const subtitleEl = document.querySelector('.subtitle');
+    const discreetText = {
+      on:{title:'Notes', sub:'Personal checklist.'},
+      off:{title:'Naveen Firewall Sheet', sub:'Partition/Title first. Sale later. 100% white only. Keep conversations short ➜ pivot ➜ redirect.'}
+    };
+
+    document.getElementById('btn-print').addEventListener('click', () => window.print());
+
+    document.getElementById('btn-discreet').addEventListener('click', (e)=>{
+      const on = e.currentTarget.dataset.on === '1';
+      if(!on){
+        titleEl.textContent = discreetText.on.title;
+        subtitleEl.textContent = discreetText.on.sub;
+        e.currentTarget.dataset.on='1';
+        e.currentTarget.innerHTML='👁️ Show';
+      }else{
+        titleEl.textContent = discreetText.off.title;
+        subtitleEl.textContent = discreetText.off.sub;
+        e.currentTarget.dataset.on='0';
+        e.currentTarget.innerHTML='🕶️ Discreet';
+      }
+    });
+
+    document.getElementById('panic').addEventListener('click', ()=>{
+      document.getElementById('panicModal').showModal();
+    });
+    document.getElementById('panicClose').addEventListener('click', ()=>{
+      document.getElementById('panicModal').close();
+    });
+
+    document.querySelectorAll('.copy').forEach(btn=>{
+      btn.addEventListener('click', async ()=>{
+        try{ await navigator.clipboard.writeText(btn.dataset.text); btn.textContent='Copied'; setTimeout(()=>btn.textContent='Copy',1200);}catch(err){ btn.textContent='Copy failed'; setTimeout(()=>btn.textContent='Copy',1500);} 
+      })
+    })
+  </script>
+</body>
+</html>
